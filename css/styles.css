@@ -40,7 +40,9 @@ padding-top: 2em;
 .header-total {
     color:var(--gray) ;
     margin: .5em 0;
-    font-weight: bold;
+    font-weight: 600;
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 1.5em;
 }
 
 h1 {
@@ -58,6 +60,8 @@ h1 {
     overflow: hidden;
     background: var(--Color-card);
     text-align: center;
+    padding: 2em 0;
+    position: relative;
 }
 
 .card-title{
@@ -78,11 +82,29 @@ h1 {
 .card:before{
     content: "";
     height: 2px;
-    background:var(--Facebook);
     display: block;
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
     
 }
 
+.card.facebook::before{
+    background:var(--Facebook);
+}
+.card.twitter::before{
+    background:var(--Twitter);
+    
+}
+.card.instagram::before{
+    background-image: linear-gradient(to right, var(--Instagram-1) 0%, var(--Instagram-2) 100%);
+    
+}
+.card.youtube::before{
+    background:var(--Youtube);
+    
+}
 
 .card-followers {
     /* border: 1px solid green; */
