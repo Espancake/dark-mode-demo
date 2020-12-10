@@ -35,6 +35,7 @@ background: #f8f9fe;
 padding-bottom: 100px;
 border-radius: 0 0 20px 20px;
 padding-top: 2em;
+display: none;
 }
 
 .header-total {
@@ -52,6 +53,8 @@ h1 {
 .top-cards{
     /* border: 1px solid green; */
     margin-top: -50px;
+    display: none;
+
 }
 
 /* card */
@@ -136,4 +139,31 @@ h1 {
 
 .card-today img {
     margin-right: 5px;
+}
+
+/* overview */
+
+.overview {
+    border: 1px solid pink;
+    margin-bottom: 1000px;
+}
+
+.card-small{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-small-views{
+    border: 1px solid green;
+}
+.card-small-icon{
+    border: 1px solid orange;
+    text-align: right;
+}
+.card-small-number{
+    border: solid purple;
+}
+.card-small-porcentage{
+    border: 1px solid blue;
 }
