@@ -29,6 +29,48 @@ body{
     display: grid;
     grid-row-gap: 50px;
 }
+
+.dark-mode{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+.checkbox{
+    display: none;
+}
+
+.checkbox:checked ~ .switch:before{
+/* border: 1px solid red; */
+transform: translateX(0);
+}
+
+.switch{
+    /* border: 1px solid red; */
+    height: 40px;
+    display: block;
+    border-radius: 20px;
+    background: var(--gray);
+    width: 80px;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+}
+
+.switch::before{
+    content:"" ;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    transform: translateX(40px);
+    transition: .3s;
+    will-change: transform;
+}
+
+
 /* header */
 .header {
 /* border: 1px solid red; */
@@ -43,7 +85,7 @@ padding-top: 2em;
     color:var(--gray) ;
     margin: .5em 0;
     font-weight: 600;
-    border-bottom: 2px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
     padding-bottom: 1.5em;
 }
 
@@ -266,6 +308,10 @@ h2{
          color: #8088ad;
      }
 
+     .card-title{
+         color: var(--gray);
+     }
+
      .card-small-views{
         color:#8088ad ;
      }
@@ -273,5 +319,13 @@ h2{
      .card-followers-title{
          columns: white;
      }
+
+     .switch{
+         background-image: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+     }
+
+     .switch:before{
+         background:#282943;
+    }
      
  }
