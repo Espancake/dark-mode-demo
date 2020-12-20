@@ -2,6 +2,8 @@
 body{
     margin: 0;
     font-family: 'Inter', sans-serif;
+    color: var(--baseColor);
+    background: var(--baseBackground);
    /* border: 1px solid red;*/
 }
 
@@ -18,6 +20,12 @@ body{
     --Youtube: hsl(348, 97%, 39%);
     --gray: #5f616d;
     --card-gray:#f0f3fa;
+    --lightGray: #f8f9fe;
+    --cardTitle:#6f717e;
+    --baseBackground:white;
+    --baseColor:#1d2029;
+    --switchSpinner:white;
+    --switch:#5f616d;
 }
 
 
@@ -50,7 +58,7 @@ transform: translateX(0);
     height: 40px;
     display: block;
     border-radius: 20px;
-    background: var(--gray);
+    background: var(--switch);
     width: 80px;
     padding: 5px;
     box-sizing: border-box;
@@ -63,7 +71,7 @@ transform: translateX(0);
     display: block;
     width: 30px;
     height: 30px;
-    background: white;
+    background: var(--switchSpinner);
     border-radius: 50%;
     transform: translateX(40px);
     transition: .3s;
@@ -74,7 +82,7 @@ transform: translateX(0);
 /* header */
 .header {
 /* border: 1px solid red; */
-background: #f8f9fe;
+background: var(--lightGray);
 padding-bottom: 100px;
 border-radius: 0 0 20px 20px;
 padding-top: 2em;
@@ -104,7 +112,7 @@ h1 {
 .card {
     border-radius: 8px;
     overflow: hidden;
-    background: var(--Color-card);
+    background: var(--card-gray);
     text-align: center;
     padding: 2em 0;
     position: relative;
@@ -115,7 +123,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6f717e;
+    color: var(--cardTitle);
     font-size: .9em;
     font-weight: bold;
 
@@ -168,7 +176,7 @@ h1 {
     /* border: 1px solid blue; */
     display: block;
     text-transform: uppercase;
-    color: var(--gray);
+    color: var(--cardTitle);
     letter-spacing: 5px;
     font-size: .75em;
 }
@@ -214,7 +222,7 @@ h2{
 
 .card-small-views{
     /* border: 1px solid green; */
-    color: var(--gray);
+    color: var(--cardTitle);
     font-weight: bold;
     font-size: .9em;
 }
@@ -283,49 +291,48 @@ h2{
          /* border: 1px solid purple; */
          grid-template-columns: 1fr 1fr 1fr 1fr;
      }
+
+     
+     .header-grid{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+    }
+ }
+
+
+
+ .is-dark-mode {
+    --card-gray:#252b43;
+    --baseBackground:#1d2029 ;
+    --baseColor:white;
+    --gray: #8088ad;
+    --lightGray:#1d2029 ;
+    --cardTitle:#8088ad;
+    --switchSpinner: #282943;
+    --switch:linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+ }
+
+ .is-light-mode{
+    --gray: #5f616d;
+    --card-gray:#f0f3fa;
+    --lightGray: #f8f9fe;
+    --cardTitle:#6f717e;
+    --baseBackground:white;
+    --baseColor:#1d2029;
+    --switchSpinner:white;
+    --switch:#5f616d;
  }
 
 
  @media (prefers-color-scheme: dark){
-     body{
-         background: #1d2029;
-         color: white;
-     }
-
-     .header{
-         background: #1d2029;
-     }
      :root{
          --card-gray:#252b43;
+         --baseBackground:#1d2029 ;
+         --baseColor:white;
          --gray: #8088ad;
+         --lightGray:#1d2029 ;
+         --cardTitle:#8088ad;
+         --switchSpinner: #282943;
+         --switch:linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
      }
-
-     .card{
-         background:#252b43 ;
-     }
-
-     .card-followers-title{
-         color: #8088ad;
-     }
-
-     .card-title{
-         color: var(--gray);
-     }
-
-     .card-small-views{
-        color:#8088ad ;
-     }
-
-     .card-followers-title{
-         columns: white;
-     }
-
-     .switch{
-         background-image: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
-     }
-
-     .switch:before{
-         background:#282943;
-    }
-     
  }
