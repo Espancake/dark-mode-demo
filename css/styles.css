@@ -35,7 +35,7 @@ background: #f8f9fe;
 padding-bottom: 100px;
 border-radius: 0 0 20px 20px;
 padding-top: 2em;
-display: none;
+
 }
 
 .header-total {
@@ -53,13 +53,13 @@ h1 {
 .top-cards{
     /* border: 1px solid green; */
     margin-top: -50px;
-    display: none;
+    margin-bottom: 3em;
 
 }
 
 /* card */
 .card {
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
     background: var(--Color-card);
     text-align: center;
@@ -144,7 +144,11 @@ h1 {
 /* overview */
 
 .overview {
-    margin-bottom: 500px;
+    padding-bottom: 2em;
+}
+
+h2{
+    color: var(--gray);
 }
 
 .card-small{
@@ -200,3 +204,36 @@ h1 {
 .card-small-porcentage img {
     margin-right: 5px;
 }
+
+
+@media screen and (min-width:480px){
+    body{
+        /* border: 1px solid red; */
+    }
+
+    .grid{
+        /* border: 1px solid purple; */
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 25px ;
+    }
+
+    .wrapper{
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+
+
+@media screen and (min-width:768px){
+   .grid{
+        /* border: 1px solid purple; */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .grid{
+         /* border: 1px solid purple; */
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+     }
+ }
